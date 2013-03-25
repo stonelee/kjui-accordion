@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <title>Accordion - accordion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="nico 0.2.4" />
+    <link type="image/x-icon" href="../static/css/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="../static/css/normalize.css" />
+    <link rel="stylesheet" href="../static/css/site.css" />
+    <link rel="stylesheet" href="../static/css/solarized.css" />
+    <script src="http://static.alipayobjects.com/seajs/1.3.1/sea.js"></script>
+    <script src="../static/js/arale-helper.js"></script>
+    <script src="../static/js/site.js"></script><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36247332-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://ssl.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script>
+  (function() {
+    var data;
+    seajs._package = data = {"name":"accordion","version":"0.0.1","root":"kjui","description":"accordion","author":"Stone Lee <istonelee@gmail.com> (http://stonelee.info)","dependencies":{"$":"$","handlebars":"gallery/handlebars/1.0.0/handlebars","widget":"arale/widget/1.0.2/widget","tree":"kjui/tree/0.0.1/tree","switchable":"arale/switchable/0.9.11/switchable"},"tests":["accordion"],"output":{"accordion.js":"."}}
+    data.dependencies && (delete data.dependencies['$'])
+    data.devDependencies && (delete data.devDependencies['$'])
+
+    seajs.config({ alias: data.dependencies })
+    seajs.config({ alias: data.devDependencies })
+    seajs.config({ alias: {"accordion":"../src/accordion.js"} })
+
+    // for alice
+    for(var dep in data.dependencies) {
+        // 如果依赖的是样式模块
+        if (data.dependencies[dep].indexOf('.css') > 0) {
+            seajs.use(dep);
+        }
+    }
+  })();
+</script>
+    <!--[if lt IE 9]>
+    <script src="../static/js/html5shiv.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+    <div id="body-wrapper">
+      <aside id="sidebar-wrapper">
+      <h1>
+          <a href="../">Accordion</a><sup class="package-root"><a href="/">kjui</a></sup>
+      </h1>
+        <p class="version">当前版本：<a href="http://aralejs.org/docs/online-status.html#kjui-accordion" title="点击查看此组件发布情况">0.0.1</a></p>
+        <p class="description">accordion</p>
+        <ul id="navigation" role="navigation">
+          <li><a href="../">文档</a></li>
+          <li><a href="../examples/">演示</a></li>
+          <li><a class="test-link" href="../tests/runner.html" target="_blank">用例</a></li>
+        </ul>
+        
+
+<ul id="module-output"> 
+</ul>
+<div id="output-card">
+    <h3>kjui/accordion/0.0.1/<a target="_blank" id="output-file"></a></h3>
+    <p>这是模块的输出文件，请 require 或 seajs.use 以上 ID 来使用本文件，具体 API 请阅读文档。</p>
+</div>
+
+      </aside>
+      <div id="content-wrapper">
+        <div id="content">
+<article class="hentry">
+  <h1 class="entry-title">accordion</h1>
+  <div class="entry-content">
+    <div class="nico-iframe">
+<iframe src="iframe-examples-index-1.html" allowtransparency="true" 
+frameborder="0" scrolling="0" height="250"></iframe></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bd"</span> <span class="attribute">id</span>=<span class="value">"demo1"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-hd unselectable"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"icon icon-book-addresses"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span>&gt;</span>模块1<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">data-role</span>=<span class="value">"flag"</span> <span class="attribute">class</span>=<span class="value">"icon icon-tool icon-tool-expand-bottom"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-bd"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">table</span> <span class="attribute">style</span>=<span class="value">"width:100%"</span> <span class="attribute">class</span>=<span class="value">"grid"</span> <span class="attribute">border</span>=<span class="value">"0"</span> <span class="attribute">cellspacing</span>=<span class="value">"0"</span> <span class="attribute">cellpadding</span>=<span class="value">"0"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">tbody</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">tr</span> <span class="attribute">class</span>=<span class="value">"grid-row"</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">td</span> <span class="attribute">class</span>=<span class="value">"grid-cell"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"icon icon-tree-elbow"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"icon icon-book"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>First
+          <span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">tr</span> <span class="attribute">class</span>=<span class="value">"grid-row"</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">td</span> <span class="attribute">class</span>=<span class="value">"grid-cell"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"icon icon-tree-elbow"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"icon icon-book"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>First
+          <span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">tr</span> <span class="attribute">class</span>=<span class="value">"grid-row"</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">td</span> <span class="attribute">class</span>=<span class="value">"grid-cell"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"icon icon-tree-elbow-end"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"icon icon-book"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>First
+          <span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-hd unselectable"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span>&gt;</span>模块1<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">data-role</span>=<span class="value">"flag"</span> <span class="attribute">class</span>=<span class="value">"icon icon-tool icon-tool-expand-bottom"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-bd"</span>&gt;</span>abc<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-hd unselectable"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span>&gt;</span>模块1<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">data-role</span>=<span class="value">"flag"</span> <span class="attribute">class</span>=<span class="value">"icon icon-tool icon-tool-expand-bottom"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-bd"</span>&gt;</span>def<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
+seajs.use([<span class="string">'kjui/accordion/0.0.1/accordion'</span>], <span class="keyword">function</span>(Accordion) {
+  accordion = <span class="keyword">new</span> Accordion({
+    element: <span class="string">'#demo1'</span>,
+    triggers: <span class="string">'.accordion-hd'</span>,
+    panels: <span class="string">'.accordion-bd'</span>,
+    height: <span class="number">200</span>
+  });
+});
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre></div><h2 id="auto-render">auto-render</h2><div class="nico-iframe">
+<iframe src="iframe-examples-index-2.html" allowtransparency="true" 
+frameborder="0" scrolling="0" height="250"></iframe></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bd"</span> <span class="attribute">id</span>=<span class="value">"demo1"</span> <span class="attribute">data-widget</span>=<span class="value">"accordion"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-hd unselectable"</span> <span class="attribute">data-role</span>=<span class="value">"trigger"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"icon icon-book-addresses"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span>&gt;</span>模块1<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">data-role</span>=<span class="value">"flag"</span> <span class="attribute">class</span>=<span class="value">"icon icon-tool icon-tool-expand-bottom"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-bd"</span> <span class="attribute">data-role</span>=<span class="value">"panel"</span>&gt;</span>xyz<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-hd unselectable"</span> <span class="attribute">data-role</span>=<span class="value">"trigger"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span>&gt;</span>模块1<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">data-role</span>=<span class="value">"flag"</span> <span class="attribute">class</span>=<span class="value">"icon icon-tool icon-tool-expand-bottom"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-bd"</span> <span class="attribute">data-role</span>=<span class="value">"panel"</span>&gt;</span>abc<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-hd unselectable"</span> <span class="attribute">data-role</span>=<span class="value">"trigger"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">span</span>&gt;</span>模块1<span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">i</span> <span class="attribute">data-role</span>=<span class="value">"flag"</span> <span class="attribute">class</span>=<span class="value">"icon icon-tool icon-tool-expand-bottom"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"accordion-bd"</span> <span class="attribute">data-role</span>=<span class="value">"panel"</span>&gt;</span>def<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
+seajs.use([<span class="string">'widget'</span>], <span class="keyword">function</span>(Widget) {
+  Widget.autoRenderAll(<span class="keyword">function</span>(){
+    <span class="keyword">var</span> accordion = Widget.query(<span class="string">'#demo1'</span>);
+    accordion.fitToHeight(<span class="number">200</span>);
+  });
+});
+
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre></div><h2 id="json">json</h2><div class="nico-iframe">
+<iframe src="iframe-examples-index-3.html" allowtransparency="true" 
+frameborder="0" scrolling="0" height="250"></iframe></div><div class="highlight"><pre><code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bd"</span> <span class="attribute">id</span>=<span class="value">"demo1"</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+seajs.use([<span class="string">'kjui/accordion/0.0.1/accordion'</span>], <span class="keyword">function</span>(Accordion) {
+  <span class="keyword">var</span> accordion = <span class="keyword">new</span> Accordion({
+    element: <span class="string">'#demo1'</span>,
+    url: <span class="string">'./accordion.json'</span>,
+    height: <span class="number">200</span>
+  });
+  accordion.on(<span class="string">'itemclick'</span>,<span class="keyword">function</span>(){
+    console.log(arguments);
+  })
+});
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre></div>
+  </div>
+</article>
+</div>
+      </div>
+      
+    </div>
+    <div id="footer-wrapper">
+      <footer>
+        <p class="powered">
+        
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
