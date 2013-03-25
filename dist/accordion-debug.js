@@ -1,7 +1,7 @@
-define("kj/accordion/0.0.1/accordion-debug", ["$-debug", "gallery/handlebars/1.0.0/handlebars-debug", "kj/tree/0.0.1/tree-debug", "arale/widget/1.0.2/widget-debug", "arale/base/1.0.1/base-debug", "arale/class/1.0.0/class-debug", "arale/events/1.0.0/events-debug", "arale/switchable/0.9.11/switchable-debug", "arale/easing/1.0.0/easing-debug"], function(require, exports, module) {
+define("kjui/accordion/0.0.1/accordion-debug", ["$-debug", "gallery/handlebars/1.0.0/handlebars-debug", "kjui/tree/0.0.1/tree-debug", "arale/widget/1.0.2/widget-debug", "arale/base/1.0.1/base-debug", "arale/class/1.0.0/class-debug", "arale/events/1.0.0/events-debug", "arale/switchable/0.9.11/switchable-debug", "arale/easing/1.0.0/easing-debug"], function(require, exports, module) {
   var $ = require('$-debug'),
     handlebars = require('gallery/handlebars/1.0.0/handlebars-debug'),
-    Tree = require('kj/tree/0.0.1/tree-debug'),
+    Tree = require('kjui/tree/0.0.1/tree-debug'),
     Switchable = require('arale/switchable/0.9.11/switchable-debug');
 
   var tpl = '{{#each headers}} <div class="accordion-hd unselectable" data-role="trigger"> <i class="icon {{this.icon}}"></i> <span>{{this.name}}</span> <i data-role="flag" class="icon icon-tool icon-tool-expand-bottom"></i> </div> <div class="accordion-bd" data-role="panel"></div> {{/each}}';
